@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Peace Blog</title>
+    <link rel="stylesheet" href="blog.css"> <!-- Connecting to CSS file -->
+</head>
+<body>
+
+    <!-- Header section with logo and navigation -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Mind Peace Logo">
+            <h1 class="site-title">Mind Peace</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="exercise.html">Exercise</a></li>
+                <li><a href="contactpage.html">Contact Us</a></li>
+                <div class="dark-mode-toggle">
+                    <button id="darkModeToggle">Toggle Dark Mode</button>
+                </div>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <!-- Main content section -->
+    <main>
+        <h1>Blog</h1>
+        <h2>Ways to Achieve Peace of Mind</h2>
+        <div class="content-container">
+            <div class="text-content">
+                <p>
+                    Finding peace of mind means doing things that help you feel calm and happy. By making these simple habits a part of your daily life, you can enjoy a more relaxed and peaceful state of mind. Start with small changes and build habits that support your overall well-being. Things to do are as follows:
+                </p>
+                <ul>
+                    <li>1. Practice Mindfulness: Focus on breathing or meditation to stay calm.</li>
+                    <li>2. Maintain a Healthy Routine: Stick to a regular sleep, eating, and exercise schedule.</li>
+                    <li>3. Connect with Nature: Spend time outside to feel refreshed and calm.</li>
+                    <li>4. Build Strong Relationships: Stay close to family and friends for support.</li>
+                    <li>5. Practice Gratitude: Think about the good things in your life to stay positive.</li>
+                </ul>
+            </div>
+            <div class="image-placeholder">
+                <img src="images/peace of mind.jpg" alt="Peace of Mind Image">
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2024 Mind Peace. All rights reserved.</p>
+        <ul class="social-links">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+        </ul>
+    </footer>
+
+    
+    <script>
+       
+        const isDarkMode = localStorage.getItem('darkMode') === 'true';
+        if (isDarkMode) {
+            document.body.classList.add('dark-mode');
+            document.querySelector('header').classList.add('dark-mode');
+            document.querySelector('footer').classList.add('dark-mode');
+            document.querySelectorAll('nav ul li a').forEach(a => a.classList.add('dark-mode'));
+        }
+    
+        document.getElementById('darkModeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('header').classList.toggle('dark-mode');
+            document.querySelector('footer').classList.toggle('dark-mode');
+            document.querySelectorAll('nav ul li a').forEach(a => a.classList.toggle('dark-mode'));
+    
+          
+            const darkModeEnabled = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', darkModeEnabled);
+        });
+    </script>
+
+</body>
+</html>

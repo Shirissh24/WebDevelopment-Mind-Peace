@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Peace - Homepage</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Mind Peace Logo">
+            <h1 class="site-title">Mind Peace</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="exercise.html">Exercise</a></li>
+                <li><a href="contactpage.html">Contact Us</a></li>
+                <div class="dark-mode-toggle">
+                    <button id="darkModeToggle">Toggle Dark Mode</button>
+                </div>
+            </ul>
+            
+        </nav>
+       
+    </header>
+
+    <main>
+        <div class="title-slogan">
+            <h1>Mind Peace</h1>
+            <h2>Find Your Ease, with Mind Peace – Where Calmness Never Cease</h2>
+        </div>
+        
+        <div class="content-container">
+            <div class="image-placeholder">
+                <img src="images/mindpeace.jpg" alt="Mind Peace Image">
+            </div>
+            <div class="text-content">
+                <p>
+                    Welcome to Mind Peace, where we guide you on your journey to mental well-being and inner tranquility. 
+                    On our blog, you'll find insightful articles on ways to achieve peace of mind, offering practical tips to help you find calm and balance in your daily life. 
+                    Additionally, we’ve detailed the 4-7-8 breathing exercise, a simple yet powerful technique to reduce stress and promote relaxation. 
+                    Explore our resources to discover effective methods for enhancing your mental peace and overall well-being.
+                </p>
+            </div>
+        </div>
+    </main>
+
+       <!-- Footer section -->
+       <footer>
+        <p>&copy; 2024 Mind Peace. All rights reserved.</p>
+        <ul class="social-links">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+        </ul>
+    </footer>
+    <script>
+        // Check if the user previously enabled dark mode
+        const isDarkMode = localStorage.getItem('darkMode') === 'true';
+        if (isDarkMode) {
+            document.body.classList.add('dark-mode');
+            document.querySelector('header').classList.add('dark-mode');
+            document.querySelector('footer').classList.add('dark-mode');
+            document.querySelectorAll('nav ul li a').forEach(a => a.classList.add('dark-mode'));
+        }
+    
+        // Add event listener for the toggle button
+        document.getElementById('darkModeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('header').classList.toggle('dark-mode');
+            document.querySelector('footer').classList.toggle('dark-mode');
+            document.querySelectorAll('nav ul li a').forEach(a => a.classList.toggle('dark-mode'));
+    
+            // Save the dark mode preference in localStorage
+            const darkModeEnabled = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', darkModeEnabled);
+        });
+    </script>
+    
+
+</body>
+</html>
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Peace - Contact Us</title>
+    <link rel="stylesheet" href="contactpage.css"> <!-- Updated CSS file reference -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Mind Peace Logo">
+            <h1 class="site-title">Mind Peace</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="exercise.html">Exercise</a></li>
+                <li><a href="contactpage.html">Contact Us</a></li>
+                <div class="dark-mode-toggle">
+                    <button id="darkModeToggle">Toggle Dark Mode</button>
+                </div>
+            </ul>
+            
+        </nav>
+    </header>
+    
+    <main>
+        <div class="contact-container">
+            <div class="left-content">
+                <h1>Let's Connect</h1>
+                <p>
+                    It is for visitors to reach out for inquiries, or support. It's an invitation
+                    for users to initiate communication, typically leading them to a contact
+                    through email or phone number. Placing this phrase strategically on a website
+                    encourages interaction, helping to faster connections between the website and
+                    the audience.
+                </p>
+                <div class="contact-details">
+                    <p><img src="images/map logo.jpg" alt="Location Icon"> Basantapur, Kathmandu</p>
+                    <p><img src="images/mail logo.jpg" alt="Email Icon"> mindpeace@gmail.com</p>
+                    <p><img src="images/telephone logo.png" alt="Phone Icon"> 1234567890</p>
+                </div>
+                
+                <!-- Follow us -->
+                <div class="social-follow">
+                    <p>Follow us on</p>
+                    <a href="#"><img src="images/instagram logo.png" alt="Instagram"></a>
+                    <a href="#"><img src="images/facebook logo.png" alt="Facebook"></a>
+                </div>
+            </div>
+            
+            <div class="right-content">
+                <h2>Contact Us</h2>
+                <form>
+                    <input class="input-box" type="text" placeholder="Username" required>
+                    <input class="input-box" type="email" placeholder="Email" required>
+                    <input class="input-box" type="tel" placeholder="Phone Number" required>
+                    <textarea class="message-box" placeholder="Message Box" required></textarea>
+                    <button class="submit-btn">Send</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2024 Mind Peace. All rights reserved.</p>
+        <ul class="social-links">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+        </ul>
+    </footer>
+    <script>
+        // Check if the user previously enabled dark mode
+        const isDarkMode = localStorage.getItem('darkMode') === 'true';
+        if (isDarkMode) {
+            document.body.classList.add('dark-mode');
+            document.querySelector('header').classList.add('dark-mode');
+            document.querySelector('footer').classList.add('dark-mode');
+            document.querySelectorAll('nav ul li a').forEach(a => a.classList.add('dark-mode'));
+        }
+    
+        // Add event listener for the toggle button
+        document.getElementById('darkModeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('header').classList.toggle('dark-mode');
+            document.querySelector('footer').classList.toggle('dark-mode');
+            document.querySelectorAll('nav ul li a').forEach(a => a.classList.toggle('dark-mode'));
+    
+            // Save the dark mode preference in localStorage
+            const darkModeEnabled = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', darkModeEnabled);
+        });
+    </script>
+
+</body>
+</html>
