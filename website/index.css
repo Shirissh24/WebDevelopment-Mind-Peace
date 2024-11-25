@@ -1,0 +1,217 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f4f7; /* Uniform background */
+    color: #333;
+}
+
+/* Header section styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo and site title */
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.site-title {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Navigation styling */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+nav ul li a:hover {
+    background-color: #007BFF;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+/* Main content section styling */
+main {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff; /* White background for content */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center; /* Center align all main text */
+}
+
+/* Title and subtitle styling */
+h1 {
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 30px;
+}
+
+/* Content layout: text on the left and image on the right */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+/* Text content styling */
+.text-content {
+    width: 55%;
+    text-align: left;
+    padding-top: 20px;
+}
+
+.text-content p, .text-content ul {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.text-content ul {
+    list-style-type: none; /* Remove list bullets */
+    padding-left: 0;
+}
+
+.text-content ul li {
+    margin-bottom: 10px;
+}
+
+/* Image section styling */
+.image-placeholder {
+    width: 40%; /* Adjust image size for better balance */
+    margin-top: 30px;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #003366;
+    color: white;
+    margin-top: 40px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Responsive styles */
+
+@media screen and (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content {
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .image-placeholder {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header.dark-mode, footer.dark-mode {
+    background-color: #1e1e1e;
+}
+
+nav ul li a.dark-mode {
+    background-color: #333;
+    color: white;
+    border-color: #555;
+}
+
+nav ul li a.dark-mode:hover {
+    background-color: #555;
+}
+
+/* Custom styles for dark mode elements */
+.dark-mode .site-title {
+    color: #e0e0e0;
+}
+
+.dark-mode main {
+    background-color: #1e1e1e;
+    box-shadow: none;
+}
+
+.dark-mode h1, .dark-mode h2 {
+    color: #e0e0e0;
+}
+
+.dark-mode p {
+    color: #c0c0c0;
+}
